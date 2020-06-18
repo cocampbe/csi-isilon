@@ -22,7 +22,7 @@ if [ $? -ne 0 ];
     kubectl create -f ./emptysecret.yaml
 fi
 
-helm install --values myvalues.yaml --name isilon --namespace isilon ./csi-isilon
+helm install isilon --values myvalues.yaml --namespace isilon ./csi-isilon
 sleep 10
 kubectl get pods --namespace isilon
 sleep 5

@@ -1,5 +1,5 @@
 #!/bin/bash
-helm delete --purge isilon
+helm delete isilon -n isilon
 sleep 10
 kubectl get pods -n isilon
 kubectl get volumesnapshotclass | grep isilon-snapclass --quiet
